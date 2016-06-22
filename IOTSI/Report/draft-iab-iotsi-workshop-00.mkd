@@ -173,9 +173,9 @@ Meta Thing
 Nearby things
 : some things may be geospatially related even if they are not on the same network or within the same administrative domain.
 
-Current data models and definitions for "things" often focus on defining actual physical devices and representing their state. That focus should perhaps be shifted into a more holistic or user-oriented perspective, defining abstract concepts as well. On the other a lot of focus is placed on human interaction with physical devices while IoT will be more oriented to interaction between "things" instead.
+Current data models and definitions for "things" often focus on defining actual physical devices and representing their state. That focus should perhaps be shifted into a more holistic or user-oriented perspective, defining abstract concepts as well. On the other hand a lot of focus is placed on human interaction with physical devices while IoT will be more oriented to interaction between "things" instead.
 
-Those things should be designed to be multiple-purpose, keeping in mind that solutions should be open-ended to facilitate new usages and new future domains of operation. this pattern has already happened, devices that were intended for one purpose end up being used for a different one given the right context ((e.g. smart phone led light turned out to be a heartrate monitor).
+Those things should be designed to be multiple-purpose, keeping in mind that solutions should be open-ended to facilitate new usages and new future domains of operation. this pattern has already happened, devices that were intended for one purpose end up being used for a different one given the right context (e.g., smart phone led light turned out to be a heartrate monitor).
 IoT domain is currently missing insights into what user actually expect. 
 
 
@@ -190,7 +190,7 @@ Standardization organizations are in the need for a more formal description of t
    
    * Formal Languages for Code Generation
 
-Formal data and information modelling languages for use by developers to enable code generation. For example, the Allseen Visual Studio Plugin {{Allseen-Plugin}} offers a wizzard to generate code based on the formal description of the data model. Another example of a data modelling language that can be used for code generation is YANG. A popular tool to help with code generation of YANG modules is pyang {{PYANG}}. 
+Formal data and information modelling languages are needed for use by developers to enable code generation. For example, the Allseen Visual Studio Plugin {{Allseen-Plugin}} offers a wizard to generate code based on the formal description of the data model. Another example of a data modelling language that can be used for code generation is YANG. A popular tool to help with code generation of YANG modules is pyang {{PYANG}}. 
    
    * Debugging Support
 
@@ -208,13 +208,13 @@ Allow IoT devices to exchange information, potentially along with the data excha
 Translation
 ============
 
-One of the targets of interoperability is to create translators between the data models. There are analogies with gateways back in 1985 when they were used to translate between network protocols, eventually IP took over providing interoperability, however we lost some of the features provided by those other protocols. The creation of an equivalent "hub/s" that offer translation between the different data models or data semantics seems one of the ways forward. Some lose of expressiveness due to the translation between models seems also unavoidable. 
+One of the targets of interoperability is to create translators between the data models. There are analogies with gateways back in 1985 when they were used to translate between network protocols, eventually IP took over providing interoperability, however we lost some of the features provided by those other protocols. The creation of an equivalent "hub/s" that offer translation between the different data models or data semantics seems one of the ways forward. Some loss of expressiveness due to the translation between models seems also unavoidable. 
 
 When it comes to translation two different distinctions appear: translating data between data models and translating data models. The first one implies doing the translation at runtime while the second performs one translation between the data models one time, like translating a YANG model to a RAML/JSON one. Indeed, for every IM multiple DMs could be translated. 
 
-In a sense these distinctions affect as to when the translation is performed. It can be done at "design time" when the information model is done, it can be done at runtime for a concrete data model and it can be done depending n the actual serialization. 
+In a sense these distinctions affect as to when the translation is performed. It can be done at "design time" when the information model is done, it can be done at runtime for a concrete data model, and it can be done depending on the actual serialization. 
 
-Yet another distinction will appear depending on the requirements from the application protocols, RPC-style ones might require a slightly different DM than REST ones for similar operations, for example SNMP-traps could be similar to CoAP-Observations but not quite the same. It is easier to translate between systems that follow the same architecture/design pattern than across architectures, full translation might not even be possible (e.g. stateless vs stateful systems).
+Yet another distinction will appear depending on the requirements from the application protocols, RPC-style protocols might require a slightly different DM than REST protocols for similar operations. For example, SNMP-traps could be similar to CoAP Observations but not quite the same. It is easier to translate between systems that follow the same architecture/design pattern than across architectures; full translation might not even be possible (e.g. stateless vs. stateful systems).
 
 Translation of models script to translate XML to YANG
 Translation of serialized data, on a hub  in order to normalize it to other data model.
